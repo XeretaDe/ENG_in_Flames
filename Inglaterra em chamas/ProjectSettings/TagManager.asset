@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Alfredo
+  - Boss
+  - ArrowSpawner
+  - Trap
+  - Trap2
+  - Espada
+  - Fogo
+  - Mage
+  - Spawner
+  - Dano
+  - Pause
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - "Ch\xE3o"
+  - Enemy
+  - Ataque
+  - Visao
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BG
+    uniqueID: 2003632549
+    locked: 0
+  - name: "Cen\xE1rioTr\xE1s"
+    uniqueID: 2823469607
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3249345031
+    locked: 0
+  - name: "Ch\xE3o"
+    uniqueID: 3097970051
+    locked: 0
+  - name: "Cen\xE1rio Meio"
+    uniqueID: 987758317
+    locked: 0
+  - name: "Cen\xE1rioFrente"
+    uniqueID: 1338581389
+    locked: 0
