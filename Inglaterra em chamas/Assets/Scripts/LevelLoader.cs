@@ -8,13 +8,18 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float TransitionTimer = 1f;
 
+    protected CallScore callScore;
+    protected ScoreTimer scoreTimer;
+
+
     GameObject Player;
 
     // Update is called once per frame
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-
+        callScore = FindObjectOfType<CallScore>();
+        scoreTimer = FindObjectOfType<ScoreTimer>();
     }
 
     public void LoadNextLevel()
@@ -32,6 +37,11 @@ public class LevelLoader : MonoBehaviour
 
     public void Menu()
     {
+        if (callScore.Venceu)
+        {
+            scoreTimer.Destruir();
+        }
+
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;
 
@@ -40,6 +50,9 @@ public class LevelLoader : MonoBehaviour
         {
             script.enabled = true;
         }
+
+
+
     }
 
 }

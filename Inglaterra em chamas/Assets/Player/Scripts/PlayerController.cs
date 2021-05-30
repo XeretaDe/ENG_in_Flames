@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         joystick = FindObjectOfType<Joystick>();
-     //   joybutton = FindObjectOfType<joybutton>();
+     //   joybutton = FindObjectOfType<Joybutton>();
 
 
         Anim = GetComponent<Animator>(); // Chamando Animator

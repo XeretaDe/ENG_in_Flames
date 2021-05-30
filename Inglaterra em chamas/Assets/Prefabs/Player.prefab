@@ -144,9 +144,6 @@ MonoBehaviour:
   ForceHorizontal: 15
   ForceVertical: 10
   TempoMorte: 1
-  MagicSpawn: {fileID: 6478165642154411368}
-  MagicPrefab: {fileID: 5338323612172373231, guid: 4f6ac5785e34a454ab15b4c096da9083,
-    type: 3}
 --- !u!1 &6478165642491081948
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +201,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -215,6 +213,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -361,8 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac6cf09102cadc40890ed687d467ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPInicial: 100
-  VidaAtual: 0
   SliderHP: {fileID: 0}
   FlashDano: {fileID: 0}
   flashCor: {r: 1, g: 0, b: 0, a: 0.1}
@@ -475,10 +472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fa5f18ae258ad4da2296e621c1dde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Tempo_Atks: 1
   MagicPoint: {fileID: 6019136470818731313}
   FogoPrefab: {fileID: 6667261420731172771, guid: e056bc176230b8545a908071984863a8,
     type: 3}
-  TemMagia: 0
 --- !u!1 &6478165643299901370
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,6 +521,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -535,6 +533,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

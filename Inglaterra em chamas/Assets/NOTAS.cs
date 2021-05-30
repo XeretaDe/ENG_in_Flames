@@ -9,9 +9,10 @@ public class NOTAS : MonoBehaviour
     {
 
         // BUGS //
-        // Audios do Boss -> Provavelmente ta mudando tao rapido o audio que ele buga 100% ou chamando o audio tao rapido q ele buga... 
+        // Audios do Boss -> Provavelmente ta mudando tao rapido o audio que ele buga 100% ou chamando o audio tao rapido q ele buga...
+        // -> NOVA POSSIBILIDADE, QD LEVANTA ESCUDO FAZ MTS PEDIDOS SEGUIDOS OQ FAZ COM Q TODOS SEJAM CHAMADOS AO FIM DA ANIMACAO DO BAIXAR
         // solucao seria 1 audio source por ataque, mas paia e ia fica td 1 por cima do outro
-        // Animacao de morte do Mago -> Provavelmente "mata" duas vezes e chama o trigger de morte duas vezes
+        // Animacao de morte do Mago -> Provavelmente "mata" duas vezes e chama o trigger de morte duas vezes  FIXED
 
 
 
@@ -39,7 +40,7 @@ public class NOTAS : MonoBehaviour
 
         // Fase 0 -> Menu -> DONE
         // Fase 2 -> Explicação da missão pelo Alfredo -> DONE
-        // Fase 3 -> Teste de inimigos -> MISSING
+        // Fase 3 -> Teste de inimigos -> DONE
         // Fase 4 -> Boss -> DONE
 
         // Transições & Sons
@@ -64,7 +65,7 @@ public class NOTAS : MonoBehaviour
 
         // EXTRAS //
         // Potion de healing +10 de vida on collision DONE
-        // Adicionar menu de Pause MISSING
+        // Adicionar menu de Pause DONE
         // Adicionar sprites de fogo no Mage  DONE
 
 

@@ -11,12 +11,16 @@ public class Player_ATK : MonoBehaviour
     public AudioClip SomEspada;
     private AudioSource audioS;
 
+    protected Joybutton joybutton;
+
     Animator Anim; // chamando Animator
 
 
     // Start is called before the first frame update
     void Start()
     {
+        joybutton = FindObjectOfType<Joybutton>();
+
         audioS = gameObject.GetComponent<AudioSource>();
         Anim = GetComponent<Animator>();
     }
@@ -24,7 +28,7 @@ public class Player_ATK : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time > Next_Atk) // Time.time Verifica o tempo desde o inicio do start do jogo
+        if (joybutton.Pressed && Time.time > Next_Atk) // Time.time Verifica o tempo desde o inicio do start do jogo
         {
 
             Atacando(); // chama void de ataque

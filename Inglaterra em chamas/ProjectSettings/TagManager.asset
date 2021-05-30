@@ -16,6 +16,7 @@ TagManager:
   - Spawner
   - Dano
   - Pause
+  - Score
   layers:
   - Default
   - TransparentFX
