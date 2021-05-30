@@ -15,11 +15,17 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d; // Declara RigidBody
     public Animator Anim; // Declara Animator
 
+    protected Joystick joystick;
+   // protected Joybutton joybutton;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        joystick = FindObjectOfType<Joystick>();
+     //   joybutton = FindObjectOfType<joybutton>();
+
+
         Anim = GetComponent<Animator>(); // Chamando Animator
         rb2d = GetComponent<Rigidbody2D>(); // Chamando Rigid
         CheckDeChao = gameObject.transform.Find("CheckDeChao"); // declara que o CheckDeChao tem que encontrar um objeto e transformar-se nele
@@ -34,7 +40,7 @@ public class PlayerController : MonoBehaviour
         noChao = Physics2D.Linecast(transform.position, CheckDeChao.position, 1 << LayerMask.NameToLayer("Chão"));
 
         //Pulando
-        if (Input.GetKeyDown("space") && noChao) // Checa se o jogador aperta espaço, e se está no chão, se estiver segue.
+        if (joystick.Vertical > 0.3 && noChao) // Checa se o jogador aperta espaço, e se está no chão, se estiver segue.         
         {
             Pulando = true; //Declara que esta pulando
             Anim.SetTrigger("Pulou"); // Liga animacao de pulo
@@ -45,14 +51,14 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Andando
+        // Andando        
 
-        float h = Input.GetAxisRaw("Horizontal"); // declara um float h que define a linha horizonta (negativa ou positiva) do player
+        float h = joystick.Horizontal; // declara um float h que define a linha horizonta (negativa ou positiva) do player
 
         Anim.SetFloat("Velocidade", Mathf.Abs(h)); // Seta um Float como velocidade para andar, enquanto o Abs faz a funcao retornar sempre valor positivo.
         rb2d.velocity = new Vector2(h * Velocidade, rb2d.velocity.y); // adiciona velocidade em h, multiplicando pela velocidade, e mantem a velocidade no eixo y estavel
 
-        if(h > 0 && !PraDireita) // se h for pra direita (eixo X > 0) e estar inverso a direita (logo esquerda)
+        if (h > 0 && !PraDireita) // se h for pra direita (eixo X > 0) e estar inverso a direita (logo esquerda)
         {
             Virar(); //Invoca void de virar o personagem
         }
