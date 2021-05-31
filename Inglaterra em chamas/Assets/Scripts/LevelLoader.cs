@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
@@ -31,6 +32,15 @@ public class LevelLoader : MonoBehaviour
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(TransitionTimer);
+
+        AnalyticsResult analyticsResult = Analytics.CustomEvent(
+        "Passou de Level",
+         new Dictionary<string, object> {
+         {"Level superado:", SceneManager.GetActiveScene().buildIndex }
+         }
+         );
+         Debug.Log("Resultado dos analytics" + analyticsResult);
+
 
         SceneManager.LoadScene(levelIndex);
     }

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine.UI; // Pega o Sistema de UI da unity
 using UnityEngine.SceneManagement; // pega o sistema de cenas da unity
+using UnityEngine.Analytics;
 using UnityEngine;
+using UnityEngine.Advertisements;
 
 public class Player_HP : MonoBehaviour
 {
@@ -21,6 +23,7 @@ public class Player_HP : MonoBehaviour
     public static bool isDead = false;
     bool TomouDano;
 
+    protected InterstitialAdsScript interstitialAdsScript;
 
     Animator Anim; // declara anim
     PlayerController playerController;
@@ -42,6 +45,9 @@ public class Player_HP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        interstitialAdsScript = FindObjectOfType<InterstitialAdsScript>();
+
 
         if (isDead)
         {
@@ -92,7 +98,22 @@ public class Player_HP : MonoBehaviour
         isDead = true; // está morto é verdade
         Anim.SetTrigger("Morreu"); // seta animação de morte
         SceneManager.LoadScene("GameOver");
+        interstitialAdsScript.ShowInterstitialAd();
+
+
+        AnalyticsResult analyticsResult = Analytics.CustomEvent(
+        "Derrota",
+         new Dictionary<string, object> {
+         {"Level de morte:", SceneManager.GetActiveScene().buildIndex },
+         {"Setor onde morreu:", Mathf.RoundToInt(transform.position.x/20f)}
+         }
+
+         );
+         Debug.Log("Resultado dos analytics" + analyticsResult);
+
     }
+
+
 
 
 }
