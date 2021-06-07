@@ -1,4 +1,4 @@
-# Jogo_HermitCrab_Inglaterra_Em_Chamas
+# Jogo_Inglaterra_Em_Chamas
  Atualização de meu projeto antigo para o teste de inscrição para a equipe fullstack da Unity da HermitCrab, decidi trabalhar com este projeto novamente, pois acabei perdendo muito tempo dos sete dias disponibilizados pela empresa para fazer o teste, isso devido a estar longe de casa e sem meu PC.
  
  
